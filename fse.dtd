@@ -12,12 +12,14 @@
 <!ELEMENT score (#PCDATA)>
 <!ELEMENT coups (deplacement | elimination | promotion | echec | roque)>
 <!ELEMENT deplacement (type_piece, dest_case, dep_case?)>
+<!ELEMENT roque (type_roque)>
+<!ELEMENT type_roque (#PCDATA)>
 <!ELEMENT type_piece (#PCDATA)>
 <!ELEMENT dest_case (#PCDATA)>
 <!ELEMENT dep_case (#PCDATA)>
 <!ELEMENT elimination (deplacement, piece_elim)>
 <!ELEMENT promotion (deplacement, piece_rempl)>
-<!ELEMENT echec (deplacement | roque, type_echec)>
+<!ELEMENT echec (deplacement, type_echec)>
 <!ELEMENT piece_elim (#PCDATA)>
 <!ELEMENT piece_rempl (#PCDATA)>
 <!ELEMENT type_echec (#PCDATA)>
