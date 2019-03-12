@@ -1,8 +1,8 @@
 <!ELEMENT fse (tournoi*)>
-<!ELEMENT tournoi (nom, partie*, vainqueur)>
+<!ELEMENT tournoi (nom, vainqueur, partie*)>
 <!ELEMENT vainqueur (joueur)>
 <!ELEMENT partie (joueur+, arbitre, date, heure, score, coups*)>
-<!ELEMENT joueur (nom, prenom, camp, elo)>
+<!ELEMENT joueur (nom, prenom, camp?, elo)>
 <!ATTLIST joueur id_fse ID #REQUIRED>
 <!ELEMENT arbitre (nom, prenom)>
 <!ELEMENT date (#PCDATA)>
