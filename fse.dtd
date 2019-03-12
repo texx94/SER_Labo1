@@ -1,25 +1,28 @@
-<!ELEMENT fse (tournoi*)>
-<!ELEMENT tournoi (nom, vainqueur, partie*)>
-<!ELEMENT vainqueur (joueur)>
-<!ELEMENT partie (joueur+, arbitre, date, heure, score, coups*)>
-<!ELEMENT joueur (nom, prenom, camp?, elo)>
+<!ELEMENT fse (tournoi*, joueur*)>
+<!ELEMENT tournoi (nom,partie*)>
+<!ATTLIST tournoi vainqueur IDREF #REQUIRED>
+<!ELEMENT partie (arbitre,date,heure,score,coups*)>
+<!ATTLIST partie joueurs IDREFS #REQUIRED>
+<!ELEMENT joueur (nom,prenom,camp?,elo)>
 <!ATTLIST joueur id_fse ID #REQUIRED>
-<!ELEMENT arbitre (nom, prenom)>
+<!ELEMENT arbitre (nom,prenom)>
 <!ELEMENT date (#PCDATA)>
 <!ELEMENT heure (#PCDATA)>
 <!ELEMENT nom (#PCDATA)>
 <!ELEMENT prenom (#PCDATA)>
 <!ELEMENT score (#PCDATA)>
-<!ELEMENT coups (deplacement | elimination | promotion | echec | roque)>
-<!ELEMENT deplacement (type_piece, dest_case, dep_case?)>
+<!ELEMENT camp (#PCDATA)>
+<!ELEMENT elo (#PCDATA)>
+<!ELEMENT coups (deplacement|elimination|promotion|echec|roque)>
+<!ELEMENT deplacement (type_piece,dest_case,dep_case?)>
 <!ELEMENT roque (type_roque)>
 <!ELEMENT type_roque (#PCDATA)>
 <!ELEMENT type_piece (#PCDATA)>
 <!ELEMENT dest_case (#PCDATA)>
 <!ELEMENT dep_case (#PCDATA)>
-<!ELEMENT elimination (deplacement, piece_elim)>
-<!ELEMENT promotion (deplacement, piece_rempl)>
-<!ELEMENT echec (deplacement, type_echec)>
+<!ELEMENT elimination (deplacement,piece_elim)>
+<!ELEMENT promotion (deplacement,piece_rempl)>
+<!ELEMENT echec (deplacement,type_echec)>
 <!ELEMENT piece_elim (#PCDATA)>
 <!ELEMENT piece_rempl (#PCDATA)>
 <!ELEMENT type_echec (#PCDATA)>
