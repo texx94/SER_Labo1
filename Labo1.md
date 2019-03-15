@@ -1,4 +1,36 @@
-# Rapport laboratoire 1 - SER
+# Sérialisation - Labo 1
+
+## Modélisation XML et DTD
+
+### Introduction
+
+Pour notre premier laboratoire de sérialisation, il nous a été demandé de créer une DTD qui permet de représenter des tournois d'échec. Ces tournois doivent inclure des joueurs, des résultats et un historique des coups pour chaque parties jouée.
+
+Comme nous n'avons aucune expérience en XML/DTD avant ce cours, nous nous sommes particulièrement appuyé sur le cours afin d'atteindre le but fixé.
+
+### DTD
+
+Dans un premier temps, nous avons choisi de commencer par écrire la DTD. Nous avons fais ce chois car, selon nous, il est plus simple d'écrire les règles dans un premier temps puis de les suivre lors de l'écriture d'un XML.
+
+Pour commencer, nous avons défini que la racine de la DTD serai la fédération suisse d'échec et que celle-ci serait composée de tournois et de joueurs. Nous avons décidé de mettre les joueurs directement dans la première balise et non pas dans chaque tournoi afin d'offrir la possibilité d'avoir des joueurs qui jouent dans plusieurs tournois (ce qui est le cas dans la réalité).
+
+Ensuite, nous avons décidé qu'un tournoi regroupe des parties qui sont elles-mêmes composées d'un arbitre, d'une date, d'une heure, d'un score et d'une liste de coups joués. De plus, nous utilisons un **IDREFS** pour assigner les deux joueurs qui ont participé à la partie.
+
+Concernant les joueurs, nous les représentons avec un nom, un prénom et son niveau ELO.
+
+Pour finir, nous avons modélisé la liste de coups de cette manière. Les coups peuvent être un déplacement, une élimination, une promotion, un échec ou un roque. Dans le cas d'un déplacement, nous prenons la pièce concernée, son point d'arrivée et sont point de départ (fac.). Les trois types de coups suivant sont une composition d'un déplacement et d'une information supplémentaire comme montré ci-dessous : 
+
++ Elimination => déplacement + pièce éliminée
++ Promotion => déplacement + pièce remplacée
++ Echec => déplacement + type d'échec
+
+Puis pour le roque, nous ne gardons que le nom du roque (Grand Roque ou Petit Roque). Nous avons décidé cela car le roque implique de toute façon le roi et une tour et fini toujours de la même manière. Il est donc inutile de garder les deux déplacement impliqué dans cette manœuvre. 
+
+### Exemple d'utilisation
+
+### Validation
+
+### Réponses aux questions
 
 #### Imaginons que vous souhaitez enregistrer le classement ELO que chaque joueur d’une partie avait au moment où elle a été jouée, qu’est-ce qu’il faudrait modifier dans votre DTD ?
 
@@ -13,3 +45,5 @@ Non il n'est pas possible de le faire.
 (J'en sais rien je te la laisse celle la haha)
 
 Ah et tu peux relire les autres pour valider mes réponses.
+
+### Conclusion
