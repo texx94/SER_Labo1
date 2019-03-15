@@ -1,9 +1,12 @@
 <!ELEMENT fse (tournoi*, joueur*)>
 <!ELEMENT tournoi (nom,partie*)>
 <!ATTLIST tournoi vainqueur IDREF #REQUIRED>
-<!ELEMENT partie (arbitre,date,heure,score,coups*)>
-<!ATTLIST partie joueurs IDREFS #REQUIRED>
-<!ELEMENT joueur (nom,prenom,camp?,elo)>
+<!ELEMENT partie (arbitre,date,heure,blanc,noir,score,coups*)>
+<!ELEMENT blanc EMPTY>
+<!ELEMENT noir EMPTY>
+<!ATTLIST blanc joueur IDREF #REQUIRED>
+<!ATTLIST noir joueur IDREF #REQUIRED>
+<!ELEMENT joueur (nom,prenom,elo)>
 <!ATTLIST joueur id_fse ID #REQUIRED>
 <!ELEMENT arbitre (nom,prenom)>
 <!ELEMENT date (#PCDATA)>

@@ -3,13 +3,15 @@
 <fse>
     <tournoi vainqueur="J1">
         <nom>Junior</nom>
-        <partie joueurs="J1 J2">
+        <partie>
             <arbitre>
                 <nom>Nemo</nom>
                 <prenom>Doris</prenom>
             </arbitre>
             <date>12.03.2019</date>
             <heure>13:30</heure>
+            <blanc joueur="J1"></blanc>
+            <noir joueur="J2"></noir>
             <score>1-0</score>
             <coups>
                 <deplacement>
@@ -49,18 +51,20 @@
                         <dest_case>h5</dest_case>
                         <dep_case>d1</dep_case>
                     </deplacement>
-                    <type_echec>echec et mat</type_echec>
+                    <type_echec>Echec et mat</type_echec>
                 </echec>
             </coups>
         </partie>
-        <partie joueurs="J1 J2">
+        <partie>
             <arbitre>
                 <nom>Nemo</nom>
                 <prenom>Doris</prenom>
             </arbitre>
             <date>12.03.2019</date>
-            <heure>13:40</heure>
-            <score>1-0</score>
+            <heure>14:40</heure>
+            <blanc joueur="J2"></blanc>
+            <noir joueur="J1"></noir>
+            <score>0-1</score>
             <coups>
                 <deplacement>
                     <type_piece>pion</type_piece>
@@ -93,26 +97,42 @@
                 </deplacement>
             </coups>
             <coups>
+                <promotion>
+                    <deplacement>
+                        <type_piece>pion</type_piece>
+                        <dest_case>h1</dest_case>
+                    </deplacement>
+                    <piece_rempl>reine</piece_rempl>
+                </promotion>
+            </coups>
+            <coups>
+                <roque>
+                    <type_roque>Grand roque</type_roque>
+                </roque>
+            </coups>
+            <coups>
                 <echec>
                     <deplacement>
                         <type_piece>dame</type_piece>
                         <dest_case>h5</dest_case>
                         <dep_case>d1</dep_case>
                     </deplacement>
-                    <type_echec>echec et mat</type_echec>
+                    <type_echec>Echec et mat</type_echec>
                 </echec>
             </coups>
         </partie>
     </tournoi>
-    <tournoi vainqueur="J1">
+    <tournoi vainqueur="J3">
         <nom>Master</nom>
-        <partie joueurs="J1 J2">
+        <partie>
             <arbitre>
                 <nom>Nemo</nom>
                 <prenom>Doris</prenom>
             </arbitre>
             <date>12.03.2019</date>
             <heure>13:30</heure>
+            <blanc joueur="J3"></blanc>
+            <noir joueur="J4"></noir>
             <score>1-0</score>
             <coups>
                 <deplacement>
@@ -152,18 +172,20 @@
                         <dest_case>h5</dest_case>
                         <dep_case>d1</dep_case>
                     </deplacement>
-                    <type_echec>echec et mat</type_echec>
+                    <type_echec>Echec et mat</type_echec>
                 </echec>
             </coups>
         </partie>
-        <partie joueurs="J1 J2">
+        <partie>
             <arbitre>
                 <nom>Nemo</nom>
                 <prenom>Doris</prenom>
             </arbitre>
             <date>12.03.2019</date>
-            <heure>13:40</heure>
-            <score>1-0</score>
+            <heure>14:40</heure>
+            <blanc joueur="J4"></blanc>
+            <noir joueur="J3"></noir>
+            <score>0-1</score>
             <coups>
                 <deplacement>
                     <type_piece>pion</type_piece>
@@ -196,13 +218,27 @@
                 </deplacement>
             </coups>
             <coups>
+                <promotion>
+                    <deplacement>
+                        <type_piece>pion</type_piece>
+                        <dest_case>h1</dest_case>
+                    </deplacement>
+                    <piece_rempl>reine</piece_rempl>
+                </promotion>
+            </coups>
+            <coups>
+                <roque>
+                    <type_roque>Grand roque</type_roque>
+                </roque>
+            </coups>
+            <coups>
                 <echec>
                     <deplacement>
                         <type_piece>dame</type_piece>
                         <dest_case>h5</dest_case>
                         <dep_case>d1</dep_case>
                     </deplacement>
-                    <type_echec>echecetmat</type_echec>
+                    <type_echec>Echec et mat</type_echec>
                 </echec>
             </coups>
         </partie>
@@ -210,13 +246,21 @@
     <joueur id_fse="J1">
         <nom>Bob</nom>
         <prenom>L'eponge</prenom>
-        <camp>Blanc</camp>
         <elo>2000</elo>
     </joueur>
     <joueur id_fse="J2">
         <nom>Cartman</nom>
         <prenom>Eric</prenom>
-        <camp>Noir</camp>
         <elo>2000</elo>
+    </joueur>
+    <joueur id_fse="J3">
+        <nom>Federer</nom>
+        <prenom>Roger</prenom>
+        <elo>2800</elo>
+    </joueur>
+    <joueur id_fse="J4">
+        <nom>Nadal</nom>
+        <prenom>Rafael</prenom>
+        <elo>2700</elo>
     </joueur>
 </fse>
